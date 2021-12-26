@@ -5,7 +5,7 @@ const app = express();
 app.get('/', function (req, res) {
    let startTime = +new Date();
    let workers = [];
-   for (let i = 0; i < 5; i++) {
+   for (let i = 0; i < 20; i++) {
       workers.push(new Worker('./factorial.js', {
          workerData: {
             number: req.query['number']
